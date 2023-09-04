@@ -1,0 +1,227 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+    background-color: rgb(244, 244, 244);
+    column-gap: 12px;
+}
+
+
+.locationBox{
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    border: 1.5px solid black;
+    padding: 10px;
+    height: 42px;
+    width: 250px;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: white;
+    padding-right: 10px;
+}
+.searchIcon2{
+    font-size: 21px;
+
+}
+.locationInputField{
+    outline: none;
+    border: none;
+    padding-left: 6px;
+    padding-right: 4px;
+    font-size: 15px;
+    width: 100%;
+}
+
+
+.downArrowIcon{
+
+    font-size: 42px;
+    font-weight: 300;   
+    transition: transform 0.6s;
+}
+.upArrowIcon{
+    font-size: 42px;
+    font-weight: 300;   
+    transform: rotate(180deg);
+    transition: transform 0.6s;
+}
+
+.searchContainer{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    justify-content: space-between;
+}
+.input{
+    width: 100%;
+    border: none;
+    padding: 10px 10px;
+    font-size: 15px;
+    height: 100%;
+    border: 1.5px solid black;
+    border-radius: 5px 0px 0px 5px ;
+}
+.input:focus{
+    border: 0.5px solid rgba(0, 200, 255, 0.308);
+    outline-offset: 0.5px;
+    outline: 1.2px solid rgba(0, 200, 255, 0.308);
+}
+
+.searchBtn{
+    border-radius: 0px 6px 6px 0px;
+    background-color: black;    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    padding: 7px;
+    border: none;
+}
+.searchBtn span{
+    color: white;
+    font-size: 28px;
+}
+.closeIcon{
+    font-size: 30px;
+}
+.languageBox{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    cursor: pointer;
+}
+.languageTxt{
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.loginBtn{
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration:1px underline ;
+   
+}
+
+.sellBtnOuter{
+    width: 85px;
+    height: 40px;
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 5.5px solid rgb(75, 228, 255) ;
+    border-left: 5.5px solid rgb(255, 238, 0) ;
+    border-bottom: 5.5px solid rgb(255, 238, 0) ;
+    border-right:  5.5px solid blue;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.423);
+    cursor: pointer;
+}
+
+
+.sellBtnInner{
+    position: relative;
+    padding: 5px;
+    outline: none;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sellBtnInner span{
+    font-weight: bolder;
+    font-size: 20px;
+}
+.sellBtnInner label{
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* dropdown menu starts */
+.dropdownMenu{
+    transition: 0.5s;
+    z-index: 1;
+    position: absolute;
+    top: 70px;
+    right: 200px;
+    box-shadow: 0 0 7px;
+    background-color: white;
+    border-radius: 3px;
+    padding: 10px 20px;
+    width: 250px;
+    animation: dropdownAnimation 0.2s ease-in-out;
+
+}
+.dropdownMenu::before{ /* for diamond shape at top of dropdown container  */
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+
+    transform: rotate(45deg);
+}
+
+.dropdownMenu ul li{
+    padding: 10px 0;
+    /* border-top: 1px solid black;   line*/
+    list-style: none;
+}
+.dropdownMenu ul li:hover{
+    color: red;
+    cursor: pointer;
+}
+.dropdownItem img{
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.dropdownItem a{
+    max-width: 100px;
+    margin-left:10px;
+    transition: 1s;
+    text-decoration: none;
+}
+.dropdownItemContentContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* dropdown menu ends */
+
+@keyframes dropdownAnimation{
+    0%{
+        .dropdownMenu{
+            top: 0px;
+        }
+    }
+    50%{
+        top: 150px;
+    }
+    100%{
+        top: 100px;
+    }
+}
+
+/* responsive design */
+@media(max-width:500px){
+    .searchContainer,.locationBox,.languageBox{
+        display: none;
+    }
+    
+    
+}
